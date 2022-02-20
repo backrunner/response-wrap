@@ -1,6 +1,6 @@
 {
-  "name": "response-wrapper",
-  "version": "0.1.0",
+  "name": "response-wrap",
+  "version": "0.1.1",
   "description": "Simple response wrapper classes for Node.js servers",
   "main": "dist/response-wrapper.umd.js",
   "module": "dist/response-wrapper.esm.js",
@@ -14,6 +14,11 @@
   },
   "author": "BackRunner",
   "license": "MIT",
+  "homepage": "https://github.com/backrunner/response-wrap",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/backrunner/response-wrap.git"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-json": "^4.1.0",
