@@ -5,6 +5,9 @@
   "main": "dist/response-wrapper.umd.js",
   "module": "dist/response-wrapper.esm.js",
   "typings": "dist/types/main.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "watch": "rollup -c rollup.config.ts -w",
     "build": "rimraf ./dist && tsc --module commonjs && rollup -c rollup.config.ts && rimraf ./dist/lib"
