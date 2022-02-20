@@ -2,8 +2,8 @@
   "name": "response-wrap",
   "version": "0.1.1",
   "description": "Simple response wrapper classes for Node.js servers",
-  "main": "dist/response-wrapper.umd.js",
-  "module": "dist/response-wrapper.esm.js",
+  "main": "dist/response-wrap.umd.js",
+  "module": "dist/response-wrap.esm.js",
   "typings": "dist/types/main.d.ts",
   "files": [
     "dist"
