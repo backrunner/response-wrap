@@ -1,10 +1,12 @@
-export class Response<T> {
-  private data: T;
+export class Response<T = any> {
+  private data?: T;
   private code?: number;
   private message?: string;
 
   public constructor(payload: T, code?: number, message?: string) {
-    this.data = payload;
+    if (typeof payload !== 'undefined') {
+      this.data = payload;
+    }
     this.code = code;
     this.message = message;
   }
@@ -24,6 +26,10 @@ export class Response<T> {
   public setData(payload: T) {
     this.data = payload;
   }
+
+  public toString() {
+    return JSON.stringify(this);
+  }
 }
 
 export class ResponseWithTs<T> extends Response<T> {
@@ -37,7 +43,7 @@ export class SuccessResponse<T> extends Response<T> {
 }
 
 export class ErrorResponse extends Response<undefined> {
-  public constructor(code: number, message: string) {
-    super(undefined, code, message);
+  public constructor(code: number, message: string, details?: any) {
+    super(details, code, message);
   }
 }
